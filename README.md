@@ -3,6 +3,12 @@ yoloswag
 
 Don't compromise: your module can do both node style callbacks and Q style promises.
 
+To install, run:
+
+```
+npm install yoloswag
+```
+
 A couple preliminary notes:
 * This library currently only works in CommonJS environments.
 * Functions that are yoloswag'd must have a fixed number of arguments.
