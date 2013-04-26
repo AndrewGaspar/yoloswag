@@ -1,0 +1,28 @@
+{
+  "name": "yoloswag",
+  "version": "0.0.1",
+  "description": "yoloswag\r ========",
+  "main": "yoloswag.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndrewGaspar/yoloswag.git"
+  },
+  "keywords": [
+    "promise",
+    "callback",
+    "node",
+    "q",
+    "async",
+    "asynchronous"
+  ],
+  "author": "Andrew Gaspar",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "3bdf4490449e4a5d91578f1871fb4ea270e18ef4",
+  "dependencies": {
+    "q": "~0.9.3"
+  }
+}
