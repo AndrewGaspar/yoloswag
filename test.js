@@ -64,6 +64,16 @@ describe("yoloswag", function () {
         });
     });
 
+    it('should fail for trying to call .then after providing node callback', function () {
+        assert.throws(function () {
+            addTwoNumbersYolo(3, 5, function (err, result) {
+
+            }).then(function (result) {
+
+            });
+        });
+    });
+
     it('should work with errors for promise', function (done) {
         ensureSumIsOddAsync(3, 5).then(undefined, function (reason) {
             done();
