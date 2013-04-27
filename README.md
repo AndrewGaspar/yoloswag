@@ -10,7 +10,7 @@ npm install yoloswag
 ```
 
 A couple preliminary notes:
-* This library currently only works in CommonJS environments.
+* This module currently only works in CommonJS environments.
 * Functions that are yoloswag'd can only work with a fixed number of arguments
   * Any call to a yoloswagged function with up to the max number of arguments returns a promise.
   * With 1 over the max number of arguments, the final argument must be a node style callback. The function call will return no value.
