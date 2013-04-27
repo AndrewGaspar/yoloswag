@@ -22,7 +22,7 @@ These restrictions may be changed later if this is a module people actually want
 Yoloswag allows you to transform your promise returning functions into node-style callbacks easily, while still allowing those client programmers who do use promises to use your library as a promise returning library.
 
 Consider the following:
-```
+```js
 function getTPSReport(id) {
   return q($.getJSON("/reports/" + id)); // q is to fix jQuery's non-complient promises
 }
@@ -30,7 +30,7 @@ function getTPSReport(id) {
 
 Normally this would return a promise. However, not all node developers wish to use Promises and prefer the comfort of node style callbacks, where the first argument is the error and the second argument is the result. Normally you'd have to choose... why not both? Let's yoloswag our API!
 
-```
+```js
 var getTPSReportYolo = yoloswag(getTPSReport);
 
 // Using a callback works
