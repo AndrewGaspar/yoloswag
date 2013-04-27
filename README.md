@@ -3,6 +3,12 @@ yoloswag
 
 Don't compromise: your module can do both node style callbacks and Q style promises.
 
+To install, run:
+
+```
+npm install yoloswag
+```
+
 A couple preliminary notes:
 * This library currently only works in CommonJS environments.
 * Functions that are yoloswag'd must have a fixed number of arguments.
@@ -20,15 +26,19 @@ function getTPSReport(id) {
 }
 ```
 
-Normally this would return a promise. However, not all node developers wish to use Promises and prefer the comfort of node style callbacks, where the first argument is the error and the second argument is the result. Let's yoloswag our API!
+Normally this would return a promise. However, not all node developers wish to use Promises and prefer the comfort of node style callbacks, where the first argument is the error and the second argument is the result. Normally you'd have to choose... why not both? Let's yoloswag our API!
 
 ```
 var getTPSReportYolo = yoloswag(getTPSReport);
 
+// Using a callback works
 getTPSReportYolo(3, function(err, result) {
-  if(result.overdue) {
-    yellAt(result.author);
-  }
+  if(result.overdue) yellAt(result.author);
+});
+
+// but you can also get a promise
+getTPSReportYolo(3).then(function(result) {
+  if(result.overdue) yellAt(result.author);
 });
 ```
 
