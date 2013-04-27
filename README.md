@@ -11,7 +11,9 @@ npm install yoloswag
 
 A couple preliminary notes:
 * This library currently only works in CommonJS environments.
-* Functions that are yoloswag'd must have a fixed number of arguments.
+* Functions that are yoloswag'd can only work with a fixed number of arguments
+  * Any call to a yoloswagged function with up to the max number of arguments returns a promise.
+  * With 1 over the max number of arguments, the final argument must be a node style callback. The function call will return no value.
 
 These restrictions may be changed later if this is a module people actually want.
 
@@ -34,12 +36,12 @@ var getTPSReportYolo = yoloswag(getTPSReport);
 // Using a callback works
 getTPSReportYolo(3, function(err, result) {
   if(result.overdue) yellAt(result.author);
-});
+}); // returns undefined
 
 // but you can also get a promise
 getTPSReportYolo(3).then(function(result) {
   if(result.overdue) yellAt(result.author);
-});
+}); // returns a promise
 ```
 
 See the tests for other examples.
