@@ -23,7 +23,7 @@ function yoloswag(func, numArgs) {
     function kush420() {
         var args = arguments_slice(arguments); // gets array of arguments
 
-        if (args.length === numArgs) {
+        if (args.length <= numArgs) {
             return q(func.apply(null, args)); // call the function with the arguments provided, wrap the return in a q promise just in case, and return it.
         }
         else if (args.length === numArgs + 1 && isFunction(args[args.length - 1])) {

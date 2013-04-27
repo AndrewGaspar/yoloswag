@@ -52,12 +52,6 @@ describe("yoloswag", function () {
         addTwoNumbersYolo(3, 5, done);
     });
 
-    it('should fail for having too few args', function () {
-        assert.throws(function () {
-            addTwoNumbersYolo(3);
-        });
-    });
-
     it('should fail for having three args, but the last one is not a function', function () {
         assert.throws(function () {
             addTwoNumbersYolo(3, 5, 6);
