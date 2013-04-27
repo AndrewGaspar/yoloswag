@@ -17,7 +17,7 @@ A couple preliminary notes:
 
 These restrictions may be changed later if this is a module people actually want.
 
-## Design with Promises
+## Design with Promises, Freedom for the Client
 
 Yoloswag allows you to transform your promise returning functions into node-style callbacks easily, while still allowing those client programmers who do use promises to use your library as a promise returning library.
 
