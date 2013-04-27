@@ -24,7 +24,7 @@ Yoloswag allows you to transform your promise returning functions into node-styl
 Consider the following:
 ```js
 function getTPSReport(id) {
-  return q($.getJSON("/reports/" + id)); // q is to fix jQuery's non-complient promises
+  return q($.getJSON("/reports/" + id)); // q is to fix jQuery's non-compliant promises
 }
 ```
 
